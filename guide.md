@@ -27,21 +27,21 @@ This guide presupposes some basic familiarity with [Scalar](http://scalar.usc.ed
 1. In your individual book directory, add scroll.css.
 _Optional: You can upload the scroll.css file to the book directory using Scalar's upload local media files function._
 1. In the Dashboard for your book, select the **Book Properties** tab, ensure you're on the correct book, and add the following in the "Custom JavaScript" field:
-  ```javascript
-  $(document).ready(function(){
-    function loadscripts(filename, filetype) {
-      if(filetype=="css") {
-        var fileref=document.createElement("link")
-        fileref.setAttribute("rel", "stylesheet")
-        fileref.setAttribute("type", "text/css")
-        fileref.setAttribute("href", filename)
-      };
-      if (typeof fileref!="undefined")
-        document.getElementsByTagName("head")[0].appendChild(fileref)
-    };
-    loadscripts("http://***URL TO***/scroll.css", "css");
-  });
-  ```
+      ```javascript
+      $(document).ready(function(){
+        function loadscripts(filename, filetype) {
+          if(filetype=="css") {
+            var fileref=document.createElement("link")
+            fileref.setAttribute("rel", "stylesheet")
+            fileref.setAttribute("type", "text/css")
+            fileref.setAttribute("href", filename)
+          };
+          if (typeof fileref!="undefined")
+            document.getElementsByTagName("head")[0].appendChild(fileref)
+        };
+        loadscripts("http://***URL TO***/scroll.css", "css");
+      });
+      ```
 ### Creating a Scrolling Path
 1. Navigate to the url of your new book.
 1. Add new media files through any of Scalar's [methods of importing media](http://scalar.usc.edu/works/guide2/working-with-media?path=index).
